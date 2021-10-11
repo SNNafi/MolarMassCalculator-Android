@@ -1,0 +1,10 @@
+<!--
+  ~ Copyright © 2021 Shahriar Nasim Nafi. All rights reserved.
+  -->
+
+<resources>
+    <string name="app_name">Molar Mass Calculator</string>
+    <string name="g_mol">%s g/mol</string>
+    <string name="percentage">%</string>
+    <string name="wrongFormula">Wrong Formula!</string>
+</resources>
