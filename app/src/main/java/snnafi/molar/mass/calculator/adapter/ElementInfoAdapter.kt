@@ -21,11 +21,14 @@ class ElementInfoAdapter(val elementInfos: ArrayList<ElementInfoKotlin>, var tot
         holder.binding.total.text = elementInfoKotlin.number.toString()
 
         val molarMass = getElementMolarMassBySymbol(elementInfoKotlin.symbol)
-        holder.binding.molarMass.text =  String.format("%.4f g/mol", molarMass)
+        holder.binding.molarMass.text = String.format("%.4f g/mol", molarMass)
 
         val totalElementMass = molarMass * elementInfoKotlin.number
         holder.binding.subtotalMass.text = String.format("%.2f g/mol", totalElementMass)
-        holder.binding.percentage.text = String.format("%.2f", totalElementMass / totalMass * 100) + holder.itemView.context.resources.getString(R.string.percentage)
+        holder.binding.percentage.text = String.format(
+            "%.2f",
+            totalElementMass / totalMass * 100
+        ) + holder.itemView.context.resources.getString(R.string.percentage)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ElementInfoHolder {
@@ -42,8 +45,6 @@ class ElementInfoAdapter(val elementInfos: ArrayList<ElementInfoKotlin>, var tot
     class ElementInfoHolder(elementView: View) : RecyclerView.ViewHolder(elementView) {
         var binding: ElementInfoViewBinding = ElementInfoViewBinding.bind(itemView);
     }
-
-
 
     /**
      * Native method(s) that is implemented by the 'molar_mass_calculator' native library,

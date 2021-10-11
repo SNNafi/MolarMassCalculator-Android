@@ -7,7 +7,6 @@ package snnafi.molar.mass.calculator
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -23,31 +22,15 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        // Example of a call to a native method binding.sampleText.text = stringFromJNI()
-//        var formula = "CH3CH(CH3)CH3"
-//        var sFormula = formula.replace(".","")
-//        performCalculation(sFormula);
-//        if (!isWrongFormula()) {
-//            binding.sampleText.text = String.format("%.2f", getCalculatedMolarMass())
-//            getResult().forEach {
-//                Log.d("ElementINFO: " + it.symbol, " -> " + it.number.toString())
-//            }
-//        } else {
-//            binding.sampleText.text = "Wrong Formula!"
-//        }
-
-
         binding.formula.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                if (binding.formula.text.toString().length == 1){
+                if (binding.formula.text.toString().length == 1) {
                     elementInfos.clear()
                     setUpRecyclerView()
                 }
-
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -73,9 +56,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun afterTextChanged(p0: Editable?) {
-
             }
-
         })
     }
 

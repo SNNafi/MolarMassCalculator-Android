@@ -1,6 +1,6 @@
 # Molar Mass Calculator - Android
 
-__Demonstrate how to use C++ code directly in an Android Project. See CLib for details.__
+Demonstrate how to use C++ code directly in an Android Project. See __src/main/cpp__ for details.
 
 ## Screenshots
 <img src="https://github.com/SNNafi/MolarMassCalculator-Android/blob/main/Pictures/Screenshot1.jpeg?raw=true" width="300" height="645">
