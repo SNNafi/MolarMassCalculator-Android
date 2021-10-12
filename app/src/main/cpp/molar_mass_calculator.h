@@ -64,8 +64,8 @@ private:
             Element("Rg", 282), Element("Cn", 285), Element("Nh", 286), Element("Fl", 289), Element("Mc", 290),
             Element("Lv", 293), Element("Ts", 294), Element("Og", 294),
     };
-    vector<int> elementIndex = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    vector<int> elementNumber = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    vector<int> elementIndex = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    vector<int> elementNumber = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     const string number = "0123456789";
     string elementS;
 

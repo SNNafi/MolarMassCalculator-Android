@@ -45,8 +45,8 @@ bool MolarMassCalculator::parse() {
     int totalLoop = 0;
     int marker2 = -1;
     int multiplier = 1;
-    int a1[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int a2[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    int a1[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    int a2[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     while (c <= formula.size() - 1 && !wrongFormula) {
         bool OK = true;
         int index = findElementIndex(formula.substr(c, 2));
@@ -272,8 +272,8 @@ bool MolarMassCalculator::isWrongFormula() {
 void MolarMassCalculator::clearData() {
     mass = 0;
     wrongFormula = false;
-    elementIndex = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    elementNumber = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    elementIndex = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    elementNumber = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     elementS = "";
     elementInfos.clear();
 }
