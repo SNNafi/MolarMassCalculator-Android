@@ -4,15 +4,19 @@
 
 package snnafi.molar.mass.calculator
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import snnafi.molar.mass.calculator.adapter.ElementInfoAdapter
 import snnafi.molar.mass.calculator.databinding.ActivityMainBinding
 import snnafi.molar.mass.calculator.model.ElementInfoKotlin
+import snnafi.molar.mass.calculator.ui.ManualActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -67,6 +71,23 @@ class MainActivity : AppCompatActivity() {
         binding.results.setHasFixedSize(true)
         val elementInfoAdapter = ElementInfoAdapter(elementInfos, mass)
         binding.results.adapter = elementInfoAdapter
+    }
+
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu);
+        return true
+    }
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.manual -> {
+                startActivity(Intent(this, ManualActivity::class.java))
+                return true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     /**
