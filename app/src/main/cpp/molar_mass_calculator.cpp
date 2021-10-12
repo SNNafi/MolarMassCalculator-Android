@@ -1,6 +1,6 @@
 //
 // Created by Shahriar Nasim Nafi on 11/10/21.
-//  Copyright © 2021 Shahriar Nasim Nafi. All rights reserved.
+// Copyright © 2021 Shahriar Nasim Nafi. All rights reserved.
 //
 
 #include "molar_mass_calculator.h"
@@ -126,7 +126,7 @@ bool MolarMassCalculator::parse() {
                     index1 >= 0 ? c4++ : OK = false;
                 }
                 if (c4 > 1) {
-                    int z = parseInt(formula.substr(1 + zz, (c4 + zz) - (1 + zz) - 1));
+                    int z = parseInt(formula.substr(1 + zz, (c4 + zz) - (1 + zz)));
                     multiplier *= z;
                 }
                 c++;

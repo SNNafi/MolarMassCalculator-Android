@@ -1,6 +1,6 @@
 //
 // Created by Shahriar Nasim Nafi on 11/10/21.
-//  Copyright © 2021 Shahriar Nasim Nafi. All rights reserved.
+// Copyright © 2021 Shahriar Nasim Nafi. All rights reserved.
 //
 
 #ifndef MOLAR_MASS_CALCULATOR_MOLAR_MASS_CALCULATOR_H
