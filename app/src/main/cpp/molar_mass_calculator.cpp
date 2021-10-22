@@ -17,6 +17,10 @@ Element::Element(string symbol, double mass) : symbol(move(symbol)), mass(mass) 
 ElementInfo::ElementInfo(string name, int number) : name(move(name)), number(number) {}
 
 
+MolarMassCalculator::MolarMassCalculator() {
+    makeElementDict();
+}
+
 // find atomic number
 int MolarMassCalculator::findElementIndex(string text) {
     int index = 0;
@@ -202,7 +206,6 @@ int MolarMassCalculator::elementAlreadyExist(string &name) {
 string MolarMassCalculator::getMolarMass(string formula) {
     this->formula = formula;
     clearData();
-    makeElementDict();
     bool success = parse();
     calculateMass();
     for (int i = 0; i < elementIndex.size(); i++) {
@@ -232,7 +235,6 @@ string MolarMassCalculator::getMolarMass(string formula) {
 void MolarMassCalculator::performCalculation(string formula) {
     this->formula = formula;
     clearData();
-    makeElementDict();
     bool success = parse();
     calculateMass();
     if (success) {
@@ -274,7 +276,6 @@ void MolarMassCalculator::clearData() {
     wrongFormula = false;
     elementIndex = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     elementNumber = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    elementS = "";
     elementInfos.clear();
 }
 

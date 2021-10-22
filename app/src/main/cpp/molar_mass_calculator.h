@@ -84,6 +84,8 @@ private:
     void clearData();
 
 public:
+    MolarMassCalculator();
+
     string getMolarMass(string formula);
 
     vector<ElementInfo> getResult();
