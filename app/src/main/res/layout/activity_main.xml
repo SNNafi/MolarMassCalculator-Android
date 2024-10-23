@@ -1,30 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright © 2021 Shahriar Nasim Nafi. All rights reserved.
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:padding="10dp">
+    android:padding="10dp"
+    tools:context=".MainActivity">
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="20dp"
-        android:background="@color/white">
+        android:background="@color/text_input">
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/formula"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
+            android:background="@color/text_input"
             android:gravity="center"
             android:hint="Enter Formula"
             android:inputType="text"
@@ -51,35 +49,37 @@
         android:id="@+id/results"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp"/>
+        android:padding="10dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
             android:layout_marginEnd="5dp"
-            android:text="Made with "
+            android:layout_marginBottom="5dp"
             android:fontFamily="sans-serif-smallcaps"
+            android:text="Made with "
             android:textSize="17sp" />
 
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-             android:src="@drawable/tea" />
+            android:src="@drawable/tea" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:text="by Shahriar Nasim Nafi "
             android:fontFamily="sans-serif-smallcaps"
+            android:text="by Shahriar Nasim Nafi "
             android:textSize="17sp" />
     </LinearLayout>
 
