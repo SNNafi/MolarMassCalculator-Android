@@ -8,15 +8,16 @@ plugins {
 }
 
 android {
-    compileSdk 34
-    ndkVersion "25.1.8937393"
+    namespace "snnafi.molar.mass.calculator"
+    compileSdk 36
+    ndkVersion "28.2.13676358"
 
     defaultConfig {
         applicationId "snnafi.molar.mass.calculator"
         minSdk 21
-        targetSdk 34
-        versionCode 103
-        versionName "1.0.2"
+        targetSdk 36
+        versionCode 104
+        versionName "1.0.3"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
